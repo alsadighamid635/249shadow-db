@@ -226,3 +226,12 @@ button:active {
     }
 }
 
+.brand-title {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    direction: ltr;
+    margin: 0 auto 45px;
+}
