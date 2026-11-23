@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+database/*.db
+archive/legacy/*.db
+.env
+
+# Local backups
+*.bak
+*.backup
+*~

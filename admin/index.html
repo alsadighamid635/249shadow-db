@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>249 SHADOW | Admin</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:20px;
+  min-height:100vh;
+  background:#f0f2f5;
+  font-family:Tahoma,Arial,sans-serif;
+  color:#202b3c
+}
+main{
+  max-width:850px;
+  margin:45px auto;
+  background:white;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 10px 35px #00000008
+}
+.logo{
+  width:85px;height:85px;
+  border:1px solid #ddd;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 25px
+}
+h2{text-align:center}
+.subtitle{text-align:center;color:#888;margin-bottom:30px}
+input{
+  width:100%;
+  padding:17px;
+  margin:10px 0;
+  border:1px solid #ddd;
+  border-radius:11px;
+  font-size:16px
+}
+button{
+  padding:13px 20px;
+  border:0;
+  border-radius:9px;
+  background:#1769e0;
+  color:white;
+  font-size:15px;
+  cursor:pointer
+}
+#login button{width:100%;margin-top:10px}
+.stats{
+  background:#f5f8ff;
+  border:1px solid #e1e9f8;
+  padding:20px;
+  border-radius:13px;
+  margin:25px 0
+}
+.count{font-size:32px;color:#1769e0;font-weight:bold}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:550px}
+th,td{padding:14px;text-align:right;border-bottom:1px solid #eee}
+th{background:#f7f8fa}
+.delete{background:#d93636}
+#message{text-align:center;color:#555;margin:15px 0}
+@media(max-width:480px){
+ main{padding:20px;margin:15px auto}
+}
+</style>
+</head>
+<body>
+<main>
+<div class="logo">
+<svg width="58" height="58" viewBox="0 0 100 100">
+<path d="M50 8L82 20V45C82 66 68 83 50 93C32 83 18 66 18 45V20Z" fill="#1769e0"/>
+<path d="M34 49L45 60L67 37" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+
+<h2>لوحة الإدارة</h2>
+<p class="subtitle">249 SHADOW — إدارة السجلات</p>
+
+<div id="login">
+<input id="adminPassword" type="password"
+placeholder="كلمة مرور الإدارة">
+<button onclick="login()">تسجيل الدخول</button>
+</div>
+
+<p id="message"></p>
+
+<section id="dashboard" hidden>
+<div class="stats">
+<div>إجمالي السجلات</div>
+<div class="count" id="total">0</div>
+</div>
+
+<h3>سجلات قاعدة البيانات</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>الرقم</th>
+<th>اسم المستخدم</th>
+<th>القيمة التجريبية</th>
+<th>التاريخ</th>
+<th>الإجراء</th>
+</tr>
+</thead>
+<tbody id="records"></tbody>
+</table>
+</div>
+</section>
+</main>
+<script src="/admin-assets/admin.js"></script>
+</body>
+</html>
